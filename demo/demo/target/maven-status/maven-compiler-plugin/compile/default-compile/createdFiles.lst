@@ -1,0 +1,11 @@
+com\rijai\LocationApi\controller\MyRestController.class
+com\rijai\LocationApi\service\CountryService.class
+com\rijai\LocationApi\service\ICountryService.class
+com\rijai\LocationApi\DemoApplication.class
+com\rijai\LocationApi\service\ICityService.class
+com\rijai\LocationApi\model\Country.class
+com\rijai\LocationApi\controller\MyController.class
+com\rijai\LocationApi\service\CityService.class
+com\rijai\LocationApi\model\City.class
+com\rijai\LocationApi\repository\CityRepository.class
+com\rijai\LocationApi\repository\CountryRepository.class
