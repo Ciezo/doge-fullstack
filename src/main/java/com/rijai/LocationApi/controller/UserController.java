@@ -46,7 +46,7 @@ public class UserController {
     }
 
     // GET BY ID
-    @RequestMapping(value = "/api/show-user{id}")
+    @RequestMapping(value = "/api/show-user/{id}")
     public User showUser(@PathVariable int id) {
         /**
          * @return A User by ID
