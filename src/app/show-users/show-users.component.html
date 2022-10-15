@@ -1,0 +1,9 @@
+<h2>User</h2>
+<div *ngFor = "let user of users">
+
+    <a href = "/users/{{user.id}}">
+       <h1> {{user.username}}</h1>  | {{user.password}}| {{user.email}}
+   </a>
+   
+
+</div>
