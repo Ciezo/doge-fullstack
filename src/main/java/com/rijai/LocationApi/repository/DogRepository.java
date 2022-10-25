@@ -1,3 +1,7 @@
+/**
+ * This is where we store the username and password for Administrators
+ * as well as store accessed records from the Dog records
+ */
 package com.rijai.LocationApi.repository;
 
 import com.rijai.LocationApi.model.Dog;
