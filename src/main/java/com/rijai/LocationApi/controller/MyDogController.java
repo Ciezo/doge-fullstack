@@ -18,15 +18,45 @@ public class MyDogController {
     private IDogService dogService;
 
     @RequestMapping("/api/dogs")
-    public List<Dog> findCountries() { return dogService.findAll(); }
+    public List<Dog> findCDog() {
+        /**
+         * @return All lists of dogs resources
+         */
+        return dogService.findAll();
+    }
 
     @RequestMapping(value = "/api/show-dog/{id}")
-    public Dog showDog(@PathVariable long id) { return dogService.getDog(id); }
+    public Dog showDog(@PathVariable long id) {
+        /**
+         * @return A Dog by ID
+         */
+        return dogService.getDog(id);
+    }
 
     @RequestMapping(value = "/api/add-dog", method = RequestMethod.POST)
-    public Dog addDogSubmit(@RequestBody Dog dog) { return dogService.addDog(dog); }
+    public Dog addDogSubmit(@RequestBody Dog dog) {
+        /**
+         * @note Request a Dog through POST
+         * @return Add Dog object
+         */
+        return dogService.addDog(dog);
+    }
 
     @RequestMapping(value = "/api/update-dog", method = RequestMethod.PUT)
-    public Dog updateCountry(@RequestBody Dog dog) { return dogService.updateDog(dog); }
+    public Dog updateCountry(@RequestBody Dog dog) {
+        /**
+         * @note Update a User through PUT
+         * @return Update user object
+         */
+        return dogService.updateDog(dog);
+
+    }
+
+    @RequestMapping(value = "/api/delete-dog/{id}", method = RequestMethod.DELETE)
+    public void deleteUser(@PathVariable int id) {
+        dogService.deleteDog(id);
+        System.out.println("Resource deleted!");
+    }
+
 
 }

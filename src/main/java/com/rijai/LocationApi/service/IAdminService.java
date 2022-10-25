@@ -13,4 +13,11 @@ public interface IAdminService {
     Dog updateDog(Dog dog);
     Dog getDog(long id);
 
+    void deleteDog(long id);
+
+
+    //Methods for returning admin values
+    //not yet working
+   // List<Admin> findAll();
+
 }

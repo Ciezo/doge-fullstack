@@ -36,9 +36,15 @@ public class AdminController {
         return adminService.addDog(dog);
     }
 
-    @RequestMapping(value = "/api/add-dog-with-admin", method = RequestMethod.PUT)
+    @RequestMapping(value = "/api/update-dog-with-admin", method = RequestMethod.PUT)
     public Dog updateDog(@RequestBody Dog dog) {
         return adminService.updateDog(dog);
+    }
+
+    @RequestMapping(value = "/api/delete-dog-with-admin/{id}", method = RequestMethod.DELETE)
+    public void deleteUser(@PathVariable int id) {
+        adminService.deleteDog(id);
+        System.out.println("Resource deleted!");
     }
 
 }

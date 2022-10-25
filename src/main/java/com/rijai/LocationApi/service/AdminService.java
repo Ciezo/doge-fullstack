@@ -1,8 +1,7 @@
 package com.rijai.LocationApi.service;
 
-import com.rijai.LocationApi.model.Country;
 import com.rijai.LocationApi.model.Dog;
-import com.rijai.LocationApi.repository.CountryRepository;
+import com.rijai.LocationApi.repository.AdminRepository;
 import com.rijai.LocationApi.repository.DogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +14,9 @@ public class AdminService implements IAdminService {
 
     @Autowired
     private DogRepository repository;
+    private AdminRepository AdminRepository;
 
+    // Dog repository Functions
     @Override
     public List<Dog> findAll() {
         // The AdminService retrieves all List of Dogs
@@ -43,4 +44,21 @@ public class AdminService implements IAdminService {
         else
             return (Dog) optional.get();
     }
+
+
+    @Override
+    public void deleteDog(long id) {
+        /**
+         * @note This deletes a user entry from the database if it is present.
+         * @note Otherwise, nothing happens, only a print in terminal
+         */
+
+        Optional<Dog> dog_toDelete = repository.findById(id);
+        if(dog_toDelete.isPresent()) {
+            repository.delete(dog_toDelete.get());
+            System.out.println("Entry deleted!");
+        }
+        System.out.println("No entries to delete!");
+    }
+    // Admin repository Functions
 }

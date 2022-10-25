@@ -20,7 +20,7 @@ public class DogService implements IDogService {
     }
 
     @Override
-    public Dog addDog (Dog dog) {
+    public Dog addDog(Dog dog) {
         return repository.save(dog);
     }
 
@@ -36,6 +36,17 @@ public class DogService implements IDogService {
             return null;
         else
             return (Dog) optional.get();
+    }
+
+    @Override
+    public void deleteDog(long id) {
+
+        Optional<Dog> dog_toDelete = repository.findById(id);
+        if (dog_toDelete.isPresent()) {
+            repository.delete(dog_toDelete.get());
+            System.out.println("Entry deleted!");
+        }
+        System.out.println("No entries to delete!");
     }
 }
 
