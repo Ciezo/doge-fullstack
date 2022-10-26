@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { ShowCountryComponent } from './show-country/show-country.component';
 import { ShowDogsComponent } from './show-dogs/show-dogs.component';
 import { ShowUsersComponent } from './show-users/show-users.component';
+import { ConfirmComponent } from './confirm/confirm.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowCountryComponent,
     ShowDogsComponent,
-    ShowUsersComponent
+    ShowUsersComponent,
+    ConfirmComponent
   ],
   imports: [
     BrowserModule,
