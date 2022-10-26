@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>createpage - IT192_Frontend</title>
+	
+
+	</head>
+	<body>
+		<div>
+			
+
+			<div class="createpage-container">
+			
+			<div id="container" class="createpage-container1">
+			<span class="createpage-text">Lucky White Vet</span>
+			<img alt="image" src="https://cdn3.iconfinder.com/data/icons/animals-105/150/icon_animal_cachorro-128.png" class="createpage-image"/>
+			</div>
+
+		
+				<div class="createpage-edit-container">
+					<div class="createpage-edit-container-inputs">
+						<form #createForm="ngForm" (ngSubmit)="createDog(createForm)">
+                            <img alt="image" src="" class="createpage-image1"/>
+                            <span class="createpage-edit">Create</span>
+                            <span class="createpage-age"   >Age</span>
+                            
+                            <input type="text" class="createpage-txtage input"  #age (ngModel)="age" name="age" id="age" />
+
+                        
+                            <span class="createpage-breed">Breed</span>
+                        
+                            <input type="text" class="createpage-txtbreed input"  #breed (ngModel)="breed" name="breed" id="breed" />
+                   
+                            <span class="createpage-id">ID:</span>
+                            <span class="createpage-code" ></span>
+                            
+                            <span class="createpage-width">Width</span>
+                            <input type="text" class="createpage-txtwidth input"  #weight (ngModel)="weight" name="weight" id="weight"/>
+                            
+                            <span class="createpage-height">Height</span>
+                            <input type="text" class="createpage-txtheight input"  #height (ngModel)="height" name="height" id="height"/>
+                            
+                            <span class="createpage-name">Name</span>
+                            <input type="text" class="createpage-txtname input"  #name (ngModel)="name" name="name" id="name"/>
+                            <button class="createpage-btnadd button" type="submit" value ="createDog">Add</button>
+                            <button class="createpage-btncancel button">Cancel</button>
+                        </form>
+					</div>
+				</div>
+			
+        </div>
+		</div>
+	</body>
+</html>
+
+

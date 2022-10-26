@@ -26,10 +26,9 @@ export class Dogservice {
         return this.http.get<Dog[]>(this.dogsUrl + '/dogs/');
     
     }
-   // public updateCountry(id: number): Observable<Dog> {
+    public addDog(values: any): Observable<Dog> {
+       return this.http.post<Dog>(this.dogsUrl + '/add-dog-with-admin',values);
 
-      //  return this.http.get<Country>(this.countriesUrl + '/api/update-country/' + id.toString());
-
-  //  }
+    }
 
 }
