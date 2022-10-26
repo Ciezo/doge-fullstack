@@ -7,7 +7,10 @@ import { ShowCountryComponent } from './show-country/show-country.component';
 //import { ShowCountriesComponent } from './show-countries/show-countries.component';
 import { ShowDogsComponent } from './show-dogs/show-dogs.component';
 import { ShowUsersComponent } from './show-users/show-users.component';
+import { ConfirmComponent } from './confirm/confirm.component';
 
+// Designate the URL paths on AngularJS (Localhost Node server)
+// These arrays are set to match the path
 const routes: Routes = [
   { path: '', redirectTo: '/admin', pathMatch: 'full' },
   { path: '', redirectTo: '/dogs', pathMatch: 'full' },
