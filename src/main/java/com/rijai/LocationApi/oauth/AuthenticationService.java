@@ -20,10 +20,28 @@
     		3. Allow logging in of existing users.
 */
 
-// PACKAGE
+// PACKAGE SECTION
 package com.rijai.LocationApi.oauth;
 
+// IMPORT SECTION
+import com.rijai.LocationApi.model.*;
+
+
 public class AuthenticationService {
+
+    // Models
+    Admin admin;
+    User user;
+
+    private boolean check = false;
+
+    public AuthenticationService(Admin admin) {
+
+    }
+
+    public AuthenticationService(User user) {
+
+    }
 
 
 

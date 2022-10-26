@@ -22,4 +22,8 @@ public class EstablishConnection {
             e.printStackTrace();
         }
     }
+
+    public Connection getConnection() {
+        return conn;
+    }
 }
