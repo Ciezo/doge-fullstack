@@ -1,0 +1,119 @@
+* {
+    font-family: Inter;
+    font-size: 16px;
+}
+
+body {
+  font-weight: 400;
+  font-style:normal;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1.15;
+  color: var(--dl-color-gray-black);
+  background-color: var(--dl-color-gray-white);
+}
+
+.frontpageadmin-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .frontpageadmin-container1 {
+    width: 100%;
+    height: 117px;
+    display: flex;
+    position: relative;
+    align-self: flex-end;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(144, 230, 161, 0.64);
+  }
+  .frontpageadmin-text {
+    font-size: 90px;
+  }
+  .frontpageadmin-image {
+    left: 39px;
+    width: 122px;
+    bottom: 0px;
+    height: 114px;
+    position: absolute;
+    object-fit: cover;
+  }
+  .frontpageadmin-edit-container {
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .frontpageadmin-edit-container-inputs {
+    top: 74px;
+    left: 0px;
+    right: 0px;
+    width: 1011px;
+    height: 471px;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .frontpageadmin-edit {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    font-size: 50px;
+  }
+  .frontpageadmin-btnrefresh {
+    left: 69px;
+    color: rgb(255, 255, 255);
+    width: 115px;
+    bottom: 13px;
+    height: 45px;
+    position: absolute;
+    text-align: center;
+    line-height: 1.5;
+    background-color: rgba(89, 89, 89, 0.68);
+  }
+  .frontpageadmin-btnlogout {
+    left: 201px;
+    color: rgb(255, 255, 255);
+    width: 115px;
+    bottom: 13px;
+    height: 45px;
+    position: absolute;
+    text-align: center;
+    line-height: 1.5;
+    background-color: rgba(89, 89, 89, 0.68);
+  }
+  .frontpageadmin-btncreate {
+    top: 7px;
+    left: 709px;
+    color: rgb(255, 255, 255);
+    width: 115px;
+    height: 45px;
+    position: absolute;
+    text-align: center;
+    line-height: 1.5;
+    background-color: rgba(89, 89, 89, 0.68);
+  }
+  .frontpageadmin-btndelete {
+    top: 7px;
+    color: rgb(255, 255, 255);
+    right: 52px;
+    width: 115px;
+    height: 45px;
+    position: absolute;
+    text-align: center;
+    line-height: 1.5;
+    background-color: rgba(89, 89, 89, 0.68);
+  }
+  

@@ -1,0 +1,98 @@
+* {
+    font-family: Inter;
+    font-size: 16px;
+  }
+
+  body {
+    font-weight: 400;
+    font-style:normal;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
+    line-height: 1.15;
+    color: var(--dl-color-gray-black);
+    background-color: var(--dl-color-gray-white);
+
+  }
+
+  .loginuser-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .loginuser-container1 {
+    flex: 1;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-self: flex-end;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(144, 230, 161, 0.64);
+  }
+  .loginuser-container2 {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 391px;
+    bottom: 0px;
+    height: 471.390625px;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .loginuser-image {
+    top: 0px;
+    left: 111px;
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    object-fit: cover;
+  }
+  .loginuser-admin {
+    top: 198px;
+    left: 2px;
+    position: absolute;
+    font-size: 25px;
+    text-align: left;
+  }
+  .loginuser-txt-username {
+    top: 233px;
+    left: 0px;
+    width: 389px;
+    height: 54px;
+    position: absolute;
+  }
+  .loginuser-pass {
+    left: 1px;
+    bottom: 145.640625px;
+    position: absolute;
+    font-size: 25px;
+  }
+  .loginuser-txtpass {
+    left: 2px;
+    width: 389px;
+    bottom: 81.390625px;
+    height: 56px;
+    position: absolute;
+  }
+  .loginuser-text {
+    right: 0px;
+    bottom: 46px;
+    position: absolute;
+  }
+  .loginuser-btnlogin {
+    right: 7px;
+    bottom: 0px;
+    position: absolute;
+  }
+  

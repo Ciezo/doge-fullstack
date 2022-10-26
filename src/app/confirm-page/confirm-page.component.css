@@ -1,0 +1,88 @@
+* {
+    font-family: Inter;
+    font-size: 16px;
+}
+
+body {
+  font-weight: 400;
+  font-style:normal;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1.15;
+  color: var(--dl-color-gray-black);
+  background-color: var(--dl-color-gray-white);
+}
+
+.confirmpage-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.confirmpage-container1 {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-self: stretch;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(144, 230, 161, 0.64);
+  }
+
+.confirmpage-container-inputs {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 765px;
+    bottom: 0px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+.confirmpage-image {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 175px;
+    height: 175px;
+    margin: auto;
+    position: absolute;
+    object-fit: cover;
+  }
+
+.confirmpage-text {
+    top: 198px;
+    left: 0px;
+    right: 0px;
+    width: 500px;
+    margin: auto;
+    position: absolute;
+    font-size: 25px;
+    text-align: left;
+  }
+  
+.confirmpage-btnthank {
+    top: 263px;
+    left: 319px;
+    color: rgb(255, 255, 255);
+    width: 115px;
+    height: 45px;
+    position: absolute;
+    text-align: center;
+    line-height: 1.5;
+    background-color: rgba(89, 89, 89, 0.68);
+  }
+  
