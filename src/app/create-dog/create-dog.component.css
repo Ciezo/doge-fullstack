@@ -1,0 +1,165 @@
+.createpage-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .createpage-container1 {
+    width: 100%;
+    height: 117px;
+    display: flex;
+    position: relative;
+    align-self: flex-end;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(144, 230, 161, 0.64);
+  }
+  .createpage-text {
+    font-size: 90px;
+  }
+  .createpage-image {
+    left: 39px;
+    width: 122px;
+    bottom: 0px;
+    height: 114px;
+    position: absolute;
+    object-fit: cover;
+  }
+  .createpage-edit-container {
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .createpage-edit-container-inputs {
+    top: 74px;
+    left: 0px;
+    right: 0px;
+    width: 1011px;
+    height: 471px;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .createpage-image1 {
+    top: 98px;
+    left: 7px;
+    width: 279px;
+    height: 243px;
+    position: absolute;
+    object-fit: cover;
+  }
+  .createpage-edit {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    font-size: 80px;
+  }
+  .createpage-age {
+    top: 229px;
+    right: 343px;
+    position: absolute;
+    font-size: 25px;
+  }
+  .createpage-txtage {
+    right: 307px;
+    width: 84px;
+    bottom: 153px;
+    height: 54px;
+    position: absolute;
+  }
+  .createpage-breed {
+    top: 227px;
+    left: 316px;
+    position: absolute;
+    font-size: 25px;
+  }
+  .createpage-txtbreed {
+    left: 316px;
+    width: 299px;
+    bottom: 153px;
+    height: 54px;
+    position: absolute;
+  }
+  .createpage-id {
+    left: 88px;
+    bottom: 96px;
+    position: absolute;
+    font-size: 20px;
+  }
+  .createpage-code {
+    left: 125px;
+    bottom: 99.609375px;
+    position: absolute;
+  }
+  .createpage-width {
+    top: 106px;
+    right: 214px;
+    position: absolute;
+    font-size: 25px;
+  }
+  .createpage-txtwidth {
+    top: 144px;
+    right: 149px;
+    width: 135px;
+    height: 54px;
+    position: absolute;
+  }
+  .createpage-height {
+    top: 106px;
+    right: 57px;
+    position: absolute;
+    font-size: 25px;
+  }
+  .createpage-txtheight {
+    top: 144px;
+    right: 0px;
+    width: 135px;
+    height: 54px;
+    position: absolute;
+  }
+  .createpage-name {
+    top: 105px;
+    left: 318px;
+    position: absolute;
+    font-size: 25px;
+  }
+  .createpage-txtname {
+    top: 142px;
+    left: 317px;
+    width: 387px;
+    height: 54px;
+    position: absolute;
+  }
+  .createpage-btnadd {
+    color: rgb(255, 255, 255);
+    right: 136px;
+    width: 115px;
+    bottom: 0px;
+    height: 45px;
+    position: absolute;
+    text-align: center;
+    line-height: 1.5;
+    background-color: rgba(89, 89, 89, 0.68);
+  }
+  .createpage-btncancel {
+    color: rgb(255, 255, 255);
+    right: 6px;
+    width: 115px;
+    bottom: 0px;
+    height: 45px;
+    position: absolute;
+    text-align: center;
+    line-height: 1.5;
+    background-color: rgba(89, 89, 89, 0.68);
+  }
+  

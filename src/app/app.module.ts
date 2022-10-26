@@ -14,11 +14,16 @@ import { FrontPageAdminComponent } from './front-page-admin/front-page-admin.com
 import { LoginUserComponent } from './login-user/login-user.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ConfirmComponent } from './confirm/confirm.component';
+
+import { ShowCountriesComponent } from './show-countries/show-countries.component';
+import { CreateDogComponent } from './create-dog/create-dog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowCountryComponent,
+    ShowCountriesComponent,
     ShowDogsComponent,
     ShowUsersComponent,
     ConfirmPageComponent,
@@ -26,7 +31,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     FrontPageAdminComponent,
     LoginUserComponent,
     LoginAdminComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    CreateDogComponent
   ],
   imports: [
     BrowserModule,
