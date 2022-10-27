@@ -15,6 +15,7 @@ import { LoginUserComponent } from './login-user/login-user.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
+
 import { ShowCountriesComponent } from './show-countries/show-countries.component';
 import { CreateDogComponent } from './create-dog/create-dog.component';
 import { EditDogComponent } from './edit-dog/edit-dog.component';
@@ -34,24 +35,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LoginUserComponent,
     LoginAdminComponent,
     LandingPageComponent,
-<<<<<<< HEAD
     CreateDogComponent,
     EditDogComponent
 
-=======
-    CreateDogComponent
->>>>>>> 5a0d3441ac9199ba0ca2ec6f6ade45627590e230
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-<<<<<<< HEAD
     HttpClientModule,
     NgbModule,
-=======
-    HttpClientModule
->>>>>>> 5a0d3441ac9199ba0ca2ec6f6ade45627590e230
   ],
   providers: [],
   bootstrap: [AppComponent]
