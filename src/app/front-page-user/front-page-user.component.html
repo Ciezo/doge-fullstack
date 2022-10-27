@@ -1,16 +1,58 @@
+
+
 <div>
       <div class="frontpageuser-container">
           <div id="container" class="frontpageuser-container1">
               <span class="frontpageuser-text">Lucky White Vet</span>
               <img alt="image" src="https://cdn3.iconfinder.com/data/icons/animals-105/150/icon_animal_cachorro-128.png" class="frontpageuser-image"/>
+              
           </div>
+
+       
+
           <div class="frontpageuser-edit-container">
               <div class="frontpageuser-edit-container-inputs">
                   <span class="frontpageuser-edit">Who Should I Love?</span>
+                  
                   <button class="frontpageuser-btnrefresh button">Refresh</button>
                   <button class="frontpageuser-btnlogout button">Logout</button>
                   <button class="frontpageuser-btnadopt button">Adopt</button>
+                
+                  
               </div>
           </div>
+          
       </div>
-  </div>
+      <div class="mt-5">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Breed</th>
+              <th>Age</th>
+              <th>Weight</th>
+              <th>Height</th>
+              <th>status</th>
+            </tr>
+          </thead>
+          <tbody class="tbody">
+            <tr *ngFor="let dog of dogs">
+              <td>{{dog.id}}</td>
+              <td>{{dog.name}}</td>
+              <td>{{dog.breed}}</td>
+              <td>{{dog.age}}</td>
+              <td>{{dog.weight}}</td>
+              <td>{{dog.height}}</td>
+              <td>{{dog.status}}</td>
+             
+    
+        
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+

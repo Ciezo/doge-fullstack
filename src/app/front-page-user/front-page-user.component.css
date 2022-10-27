@@ -115,3 +115,6 @@ body {
     background-color: rgba(89, 89, 89, 0.68);
   }
   
+  table, th, td {
+    border:1px solid black;
+  }

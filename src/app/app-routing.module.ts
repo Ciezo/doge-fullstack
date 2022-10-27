@@ -15,6 +15,7 @@ import { ShowDogsComponent } from './show-dogs/show-dogs.component';
 import { ShowUsersComponent } from './show-users/show-users.component';
 import { ConfirmComponent } from './confirm/confirm.component';
 
+
 // Designate the URL paths on AngularJS (Localhost Node server)
 // These arrays are set to match the path
 const routes: Routes = [
@@ -35,8 +36,9 @@ const routes: Routes = [
   { path: 'landing-page', component: LandingPageComponent},
   { path: 'countries', component: ShowCountriesComponent },
   { path: 'country/:id', component: ShowCountryComponent },
-  { path: 'admin', component: CreateDogComponent },
-  { path: 'admin/:id', component: CreateDogComponent }
+  { path: 'create-admin', component: CreateDogComponent },
+  { path: 'admin/:id', component: CreateDogComponent },
+
   
 ];
 

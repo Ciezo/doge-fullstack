@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Dog } from '../model/dog';
+
 import { Dogservice } from '../service/dogservice';
 
 @Component({
@@ -9,7 +11,10 @@ import { Dogservice } from '../service/dogservice';
 })
 export class CreateDogComponent implements OnInit {
   title ='adminDashboard';
-  constructor(private dogService:Dogservice) { }
+  dogs: Dog[]=[]
+  constructor(private dogService:Dogservice) {
+    
+   }
 
 
   createDog(createForm: NgForm){
@@ -22,7 +27,7 @@ export class CreateDogComponent implements OnInit {
       (err) => {
         console.log(err);
       }
-    );;
+    );
   }
   ngOnInit(): void {
   }

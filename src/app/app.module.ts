@@ -19,6 +19,7 @@ import { ConfirmComponent } from './confirm/confirm.component';
 import { ShowCountriesComponent } from './show-countries/show-countries.component';
 import { CreateDogComponent } from './create-dog/create-dog.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,12 +34,13 @@ import { CreateDogComponent } from './create-dog/create-dog.component';
     LoginAdminComponent,
     LandingPageComponent,
     CreateDogComponent
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
