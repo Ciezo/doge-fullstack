@@ -9,11 +9,12 @@ import { Dogservice } from '../service/dogservice';
 })
 export class FrontPageUserComponent implements OnInit {
 
-  dogs: Dog[] = []
-  constructor(private dogService:Dogservice) { 
+  dogs: Dog[]=[]
+  constructor(private dogService:Dogservice) {
     
   }
 
+  
   getDogDetails() {
     this.dogService.getDogs().subscribe(
       (resp: any) => {
@@ -28,6 +29,7 @@ export class FrontPageUserComponent implements OnInit {
 
   ngOnInit(): void {
     this.dogService.getDogs().subscribe((data: Dog[]) => {this.dogs = data});
+    
   }
 
 }
