@@ -1,7 +1,66 @@
+<div class="mt-5">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Breed</th>
+        <th>Age</th>
+        <th>Weight</th>
+        <th>Height</th>
+        <th>status</th>
+      </tr>
+    </thead>
+    <tbody class="tbody">
+      <tr *ngFor="let dog of dogs">
+        <td>{{dog.id}}</td>
+        <td>{{dog.name}}</td>
+        <td>{{dog.breed}}</td>
+        <td>{{dog.age}}</td>
+        <td>{{dog.weight}}</td>
+        <td>{{dog.height}}</td>
+        <td>{{dog.status}}</td>
+       
 
-   
+        <td><button  type="button" class="btn btn-primary" (click)="edit(dog)"  (click)="open(content)">Edit</button></td>
+        <td><button type="button" class="btn btn-danger" (click)="removeDog(dog)" >Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
- 
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Update Details</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="c('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form #editForm="ngForm" (ngSubmit)="editDog()">
+      <label > ID: </label>
+      <input disabled type="text"  #id [(ngModel)]="dogToUpdate.id" name="id" id="id"/>
+      <label > Name: </label>
+      <input type="text"  #name [(ngModel)]="dogToUpdate.name" name="name" id="name"/>
+      <label > Breed: </label>
+      <input type="text"  #breed [(ngModel)]="dogToUpdate.breed" name="breed" id="breed"/>
+      <label > Age: </label>
+      <input type="text"  #weight [(ngModel)]="dogToUpdate.age" name="age" id="age"/>
+      <label > Weight: </label>
+      <input type="text"  #weight [(ngModel)]="dogToUpdate.weight" name="weight" id="weight"/>
+      <label > Height: </label>
+      <input type="text"  #height [(ngModel)]="dogToUpdate.height" name="height" id="height"/>
+      <label > Status: </label>
+      <input type="text"  #status [(ngModel)]="dogToUpdate.status" name="status" id="status"/>
+     
+
+      <button class="editpage-btnupt button" type="submit" value="Update" (click)="c('Save click')">Update</button>
+      
+    </form>
+  </div>
+  <div class="modal-footer">
+  
+  </div>
+</ng-template>
+
 
       <div>
         <div class="frontpageadmin-container">
@@ -14,40 +73,12 @@
                       <span class="frontpageadmin-edit">Dogs Information</span>
                       <button class="frontpageadmin-btnrefresh button">Refresh</button>
                       <button class="frontpageadmin-btnlogout button">Logout</button>
-                      <button class="frontpageadmin-btncreate button">Create</button>
+                      <button class="frontpageadmin-btncreate button" routerLink = "/create-admin">Create</button>
                       <button class="frontpageadmin-btndelete button">Delete</button>
                   </div>
               </div>
-              
         </div>
-        <div class="mt-5">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Breed</th>
-                <th>Age</th>
-                <th>Weight</th>
-                <th>Height</th>
-                <th>status</th>
-              </tr>
-            </thead>
-            <tbody class="tbody">
-              <tr *ngFor="let dog of dogs">
-                <td>{{dog.id}}</td>
-                <td>{{dog.name}}</td>
-                <td>{{dog.breed}}</td>
-                <td>{{dog.age}}</td>
-                <td>{{dog.weight}}</td>
-                <td>{{dog.height}}</td>
-                <td>{{dog.status}}</td>
-               
+        
       
-                <td><button  type="button" class="btn btn-primary" (click)="edit(dog)" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button></td>
-                <td><button type="button" class="btn btn-danger" (click)="removeDog(dog)" >Delete</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-    </div>
+ 
+</div>

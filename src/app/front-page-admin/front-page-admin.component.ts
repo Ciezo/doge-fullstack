@@ -14,7 +14,7 @@ export class FrontPageAdminComponent implements OnInit {
   dogs = null as any;
 
   dogToUpdate = {
- 
+    id:"",
     name:"",
     breed:"",
     age:"",
@@ -28,6 +28,7 @@ export class FrontPageAdminComponent implements OnInit {
 		config.keyboard = false;
     
   }
+  
 	open(content: any) {
 		this.modalService.open(content);
 	}

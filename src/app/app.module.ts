@@ -18,6 +18,8 @@ import { ConfirmComponent } from './confirm/confirm.component';
 
 import { ShowCountriesComponent } from './show-countries/show-countries.component';
 import { CreateDogComponent } from './create-dog/create-dog.component';
+import { EditDogComponent } from './edit-dog/edit-dog.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { CreateDogComponent } from './create-dog/create-dog.component';
     LoginUserComponent,
     LoginAdminComponent,
     LandingPageComponent,
-    CreateDogComponent
+    CreateDogComponent,
+    EditDogComponent
 
   ],
   imports: [
@@ -41,6 +44,7 @@ import { CreateDogComponent } from './create-dog/create-dog.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
