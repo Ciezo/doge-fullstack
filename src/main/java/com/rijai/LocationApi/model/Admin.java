@@ -2,11 +2,9 @@ package com.rijai.LocationApi.model;
 
 import javax.persistence.*;
 import java.util.Objects;
-import lombok.Data;
 
 
 @Entity
-@Data
 @Table(name="admin")
 public class Admin {
     /**
