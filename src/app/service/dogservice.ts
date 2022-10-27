@@ -1,5 +1,4 @@
 import { Observable } from "rxjs";
-import { Country } from "../model/country";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from "@angular/core";
 import { Dog } from "../model/dog";
@@ -30,5 +29,13 @@ export class Dogservice {
        return this.http.post<Dog>(this.dogsUrl + '/add-dog-with-admin',values);
 
     }
+    public deleteDog(id: number) {
+        return this.http.delete<Dog>(this.dogsUrl + '/delete-dog-with-admin/'+id.toString() );
+ 
+     }
+     public updateDog(dog: any) {
+        return this.http.put<Dog>(this.dogsUrl + '/update-dog-with-admin/',dog);
+ 
+     }
 
 }

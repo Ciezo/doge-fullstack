@@ -1,13 +1,50 @@
-<div>
-    <div class="landingpage-container">
-        <div class="landingpage-container-inputs">
-            <img lt="image" src="https://cdn3.iconfinder.com/data/icons/animals-105/150/icon_animal_cachorro-128.png" class="landingpage-image"/>
-            <button class="landingpage-btnadmin button">Admin</button>
-            <button class="landingpage-btn-user button">User</button>
-            <div id="container" class="landingpage-container1">
-                <span class="landingpage-text">Lucky White Vet</span>
+<head>
+<title>Home Page</title>
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+data-tag="font"
+/>
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+/>
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+rel="stylesheet"
+/>
+<link
+href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+rel="stylesheet"
+/>
+<link
+href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet"
+/>
+</head>
+<body>
+    <section class="hero is-fullheight is-default is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column is-5 is-offset-1 landing-caption">
+              <h1 class="title is-1 is-bold is-spaced">Lucky White Vet</h1>
+              <h2 class="subtitle is-4 is-muted">
+                Dogs are not out whole life, but they make our lives whole
+              </h2>
+              <div class = "button-wrap">
+                <a class = "button cta  primary-btn raised" routerLink = "/login-admin"> Admin </a>
+                <a class = "button cta" routerLink = "/login-user"> User </a>
+              </div>
             </div>
-        <span class="landingpage-text1"> Dogs are not out whole life, but they make our lives whole</span>
+            <div class="column is-5">
+              <figure class="image is-4by4">
+                <img src="https://i.postimg.cc/SsyYhtdd/Nice-Png-beagle-png-989857.png" alt="Description" />
+              </figure>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
+    </section>
+  </body>

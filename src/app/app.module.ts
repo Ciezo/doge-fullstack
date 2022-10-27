@@ -14,10 +14,12 @@ import { FrontPageAdminComponent } from './front-page-admin/front-page-admin.com
 import { LoginUserComponent } from './login-user/login-user.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { ConfirmComponent } from './confirm/confirm.component';
 
 import { ShowCountriesComponent } from './show-countries/show-countries.component';
 import { CreateDogComponent } from './create-dog/create-dog.component';
+import { EditDogComponent } from './edit-dog/edit-dog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -32,13 +34,16 @@ import { CreateDogComponent } from './create-dog/create-dog.component';
     LoginUserComponent,
     LoginAdminComponent,
     LandingPageComponent,
-    CreateDogComponent
+    CreateDogComponent,
+    EditDogComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

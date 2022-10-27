@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ConfirmComponent } from './confirm.component';
+import { EditDogComponent } from './edit-dog.component';
 
-describe('ConfirmComponent', () => {
-  let component: ConfirmComponent;
-  let fixture: ComponentFixture<ConfirmComponent>;
+describe('EditDogComponent', () => {
+  let component: EditDogComponent;
+  let fixture: ComponentFixture<EditDogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ConfirmComponent ]
+      declarations: [ EditDogComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ConfirmComponent);
+    fixture = TestBed.createComponent(EditDogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
