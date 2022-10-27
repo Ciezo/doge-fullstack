@@ -30,8 +30,13 @@ import com.rijai.LocationApi.model.*;
 
 public class AuthenticationService {
 
+    // Attributes
+    private int id;
+    private String username;
+    private String password;
+
     // Models
-    Admin admin_toAuth;
+    Admin admin_toAuth = null;
     User user_toAuth;
 
     private boolean check = false;
@@ -49,6 +54,16 @@ public class AuthenticationService {
         this.admin_toAuth.setPassword(admin_to_instantiate.getPassword());
     }
 
+    public AuthenticationService(int ID, String username, String password) {
+        /**
+         * @note This can instantiate the admin: Admin object
+         * @param setID, setUsername, setPassword
+         */
+        this.id = id;
+        this.username = username;
+        this.password = password;
+    }
+
     public AuthenticationService(User user_to_instantiate) {
         /**
          * @note This can instantiate an object of the user: User
@@ -61,6 +76,7 @@ public class AuthenticationService {
     }
 
     public AuthenticationService() {}
+
 
     // This method will check the validity of the passed attributes to Authenticate the Admin
     public boolean checkAdminCredsValidity() {
@@ -77,12 +93,15 @@ public class AuthenticationService {
         admin_to_check_Existing = driver.getAdminRecords(admin_toAuth.getUsername());
 
         // Check using username and assign by ID
-        if (admin_to_check_Existing.equals(admin_toAuth)) {
-            check = true;
-            System.out.println("VALIDITY REQUEST: " + check);
-            return check;
-        }
-
+        if ( (admin_to_check_Existing.getUsername().equals(admin_toAuth.getUsername()) ) &&         // check username
+                (admin_to_check_Existing.getPassword().equals(admin_toAuth.getPassword()) )  &&     // check password
+                    (admin_to_check_Existing.getId() == admin_toAuth.getId()) &&                    // check ID
+                        (admin_to_check_Existing.equals(admin_toAuth)) )
+                            {
+                                check = true;
+                                System.out.println("VALIDITY REQUEST: " + check);
+                                return check;
+                            }
         // Otherwise, return FALSE
         return check;
     }
