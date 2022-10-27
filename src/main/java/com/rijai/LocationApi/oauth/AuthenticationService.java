@@ -31,21 +31,22 @@ import com.rijai.LocationApi.model.*;
 public class AuthenticationService {
 
     // Models
-    Admin admin;
-    User user;
+    Admin admin_toAuth;
+    User user_toAuth;
 
     private boolean check = false;
 
     // My Driver API
     MyDriver driver = new MyDriver();
+
     public AuthenticationService(Admin admin_to_instantiate) {
         /**
          * @note This can instantiate the admin: Admin object
          * @param setID, setUsername, setPassword
          */
-        this.admin.setId(admin_to_instantiate.getId());
-        this.admin.setUsername(admin_to_instantiate.getUsername());
-        this.admin.setPassword(admin_to_instantiate.getPassword());
+        this.admin_toAuth.setId(admin_to_instantiate.getId());
+        this.admin_toAuth.setUsername(admin_to_instantiate.getUsername());
+        this.admin_toAuth.setPassword(admin_to_instantiate.getPassword());
     }
 
     public AuthenticationService(User user_to_instantiate) {
@@ -53,11 +54,36 @@ public class AuthenticationService {
          * @note This can instantiate an object of the user: User
          * @param setID, setUsername, setPassword, setEmail
          */
-        this.user.setId(user_to_instantiate.getId());
-        this.user.setUsername(user_to_instantiate.getUsername());
-        this.user.setPassword(user_to_instantiate.getPassword());
-        this.user.setEmail(user_to_instantiate.getEmail());
+        this.user_toAuth.setId(user_to_instantiate.getId());
+        this.user_toAuth.setUsername(user_to_instantiate.getUsername());
+        this.user_toAuth.setPassword(user_to_instantiate.getPassword());
+        this.user_toAuth.setEmail(user_to_instantiate.getEmail());
     }
 
-}
+    public AuthenticationService() {}
 
+    // This method will check the validity of the passed attributes to Authenticate the Admin
+    public boolean checkAdminCredsValidity() {
+        /**
+         * @note This method checks the validity of the attributes passed on the AuthenticationService()
+         * @return true if the user has a record in the database (repository)
+         * @return false if the user does not have a record in the database (repository)
+         */
+
+        this.admin_toAuth = driver.getAdminRecords(admin_toAuth.getUsername());
+
+        // Create a user object and is used to be assigned on returned records from the database
+        Admin admin_to_check_Existing;
+        admin_to_check_Existing = driver.getAdminRecords(admin_toAuth.getUsername());
+
+        // Check using username and assign by ID
+        if (admin_to_check_Existing.equals(admin_toAuth)) {
+            check = true;
+            System.out.println("VALIDITY REQUEST: " + check);
+            return check;
+        }
+
+        // Otherwise, return FALSE
+        return check;
+    }
+}
