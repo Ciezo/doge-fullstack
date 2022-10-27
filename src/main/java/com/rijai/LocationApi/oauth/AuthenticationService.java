@@ -24,6 +24,7 @@
 package com.rijai.LocationApi.oauth;
 
 // IMPORT SECTION
+import com.rijai.LocationApi.driver.MyDriver;
 import com.rijai.LocationApi.model.*;
 
 
@@ -35,14 +36,28 @@ public class AuthenticationService {
 
     private boolean check = false;
 
-    public AuthenticationService(Admin admin) {
-
+    // My Driver API
+    MyDriver driver = new MyDriver();
+    public AuthenticationService(Admin admin_to_instantiate) {
+        /**
+         * @note This can instantiate the admin: Admin object
+         * @param setID, setUsername, setPassword
+         */
+        this.admin.setId(admin_to_instantiate.getId());
+        this.admin.setUsername(admin_to_instantiate.getUsername());
+        this.admin.setPassword(admin_to_instantiate.getPassword());
     }
 
-    public AuthenticationService(User user) {
-
+    public AuthenticationService(User user_to_instantiate) {
+        /**
+         * @note This can instantiate an object of the user: User
+         * @param setID, setUsername, setPassword, setEmail
+         */
+        this.user.setId(user_to_instantiate.getId());
+        this.user.setUsername(user_to_instantiate.getUsername());
+        this.user.setPassword(user_to_instantiate.getPassword());
+        this.user.setEmail(user_to_instantiate.getEmail());
     }
-
-
 
 }
+
