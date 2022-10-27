@@ -13,8 +13,6 @@ import { ShowCountryComponent } from './show-country/show-country.component';
 //import { ShowCountriesComponent } from './show-countries/show-countries.component';
 import { ShowDogsComponent } from './show-dogs/show-dogs.component';
 import { ShowUsersComponent } from './show-users/show-users.component';
-import { ConfirmComponent } from './confirm/confirm.component';
-
 
 // Designate the URL paths on AngularJS (Localhost Node server)
 // These arrays are set to match the path
@@ -34,12 +32,10 @@ const routes: Routes = [
   { path: 'login-user', component: LoginUserComponent},
   { path: 'login-admin', component: LoginAdminComponent},
   { path: 'landing-page', component: LandingPageComponent},
-  { path: 'countries', component: ShowCountriesComponent },
-  { path: 'country/:id', component: ShowCountryComponent },
-  { path: 'create-admin', component: CreateDogComponent },
-  { path: 'admin/:id', component: CreateDogComponent },
-
-  
+  { path: 'countries', component: ShowCountriesComponent},
+  { path: 'country/:id', component: ShowCountryComponent},
+  { path: 'admin', component: CreateDogComponent},
+  { path: 'admin/:id', component: CreateDogComponent}
 ];
 
 @NgModule({

@@ -1,5 +1,4 @@
 import { Observable } from "rxjs";
-import { Country } from "../model/country";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from "@angular/core";
 import { Dog } from "../model/dog";

@@ -24,6 +24,10 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+<<<<<<< HEAD
+=======
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+>>>>>>> 5a0d3441ac9199ba0ca2ec6f6ade45627590e230
               "src/styles.css"
             ],
             "scripts": []
@@ -91,6 +95,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.css"
             ],
             "scripts": []

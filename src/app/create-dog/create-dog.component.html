@@ -1,56 +1,156 @@
 <!DOCTYPE html>
+<link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 <html lang="en">
 	<head>
 		<title>createpage - IT192_Frontend</title>
 	
 
 	</head>
-	<body>
-		<div>
-			
-
-			<div class="createpage-container">
-			
-			<div id="container" class="createpage-container1">
-			<span class="createpage-text">Lucky White Vet</span>
-			<img alt="image" src="https://cdn3.iconfinder.com/data/icons/animals-105/150/icon_animal_cachorro-128.png" class="createpage-image"/>
-			</div>
-
-		
-				<div class="createpage-edit-container">
-					<div class="createpage-edit-container-inputs">
-						<form #createForm="ngForm" (ngSubmit)="createDog(createForm)">
-                            <img alt="image" src="" class="createpage-image1"/>
-                            <span class="createpage-edit">Create</span>
-                            <span class="createpage-age"   >Age</span>
-                            
-                            <input type="text" class="createpage-txtage input"  #age (ngModel)="age" name="age" id="age" />
-
-                        
-                            <span class="createpage-breed">Breed</span>
-                        
-                            <input type="text" class="createpage-txtbreed input"  #breed (ngModel)="breed" name="breed" id="breed" />
-                   
-                            <span class="createpage-id">ID:</span>
-                            <span class="createpage-code" ></span>
-                            
-                            <span class="createpage-width">Width</span>
-                            <input type="text" class="createpage-txtwidth input"  #weight (ngModel)="weight" name="weight" id="weight"/>
-                            
-                            <span class="createpage-height">Height</span>
-                            <input type="text" class="createpage-txtheight input"  #height (ngModel)="height" name="height" id="height"/>
-                            
-                            <span class="createpage-name">Name</span>
-                            <input type="text" class="createpage-txtname input"  #name (ngModel)="name" name="name" id="name"/>
-                            <button class="createpage-btnadd button" type="submit" value ="createDog">Add</button>
-                            <button class="createpage-btncancel button">Cancel</button>
-                        </form>
-					</div>
-				</div>
-			
+  <body>
+    <nav
+      class="navbar is-fresh is-transparent mt-3"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="container">
+        <div class="navbar-brand is-flex is-align-items-center">
+          <figure class="image is-96x96">
+            <img src="https://i.postimg.cc/SsyYhtdd/Nice-Png-beagle-png-989857.png" alt="Description" />
+          </figure>
+          <h1 class="title is-1 is-bold is-spaced ml-2">Lucky White Vet</h1>
         </div>
-		</div>
-	</body>
+
+        <div id="cloned-navbar-menu" class="navbar-menu is-fixed">
+          <div class="navbar-end">
+            <a
+              href="#"
+              class="navbar-item is-secondary modal-trigger"
+              data-modal="auth-modal"
+            >
+              Refresh
+            </a>
+            <a class="navbar-item">
+              <span class="button signup-button rounded secondary-btn raised">
+                Log out
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div>
+      <section class="hero is-fullheight">
+        <div class="hero-body container">
+          <div class="login">
+            <!-- <figure class="image is-2by2">
+              <img src="../NicePng_beagle-png_989857.png" alt="Description" />
+            </figure> -->
+            <form #createForm = "ngForm" (ngSubmit) = "createDog(createForm)">
+              <span class = "createpage-id">ID: </span>
+              <span class = "createpage-code"></span>
+              <div class="field">
+                <label class="label">Name</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="createpage-txtname input" type="text" placeholder="Name" #name (ngModel)="name" name="name" id="name"/>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-dog"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Breed</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="createpage-txtbreed input" type="text" placeholder="Breed" #breed (ngModel)="breed" name="breed" id="breed" />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-paw"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Age</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="createpage-txtage input" type="text" placeholder="Age" #age (ngModel)="age" name="age" id="age" />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-calendar"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Weight</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="createpage-txtwidth input" type="text" placeholder="Weight" #weight (ngModel)="weight" name="weight" id="weight"/>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-ruler-horizontal"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Height</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="createpage-txtheight input" type="text" placeholder="Height" #height (ngModel)="height" name="height" id="height"/>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-ruler-vertical"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                  </span>
+                </div>
+              </div>
+              <br />
+              <button
+                class="button is-block is-fullwidth is-primary is-medium"
+                type="submit"
+                value="createDog"
+              >
+                Create
+              </button>
+            </form>
+            <br />
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
 
 
