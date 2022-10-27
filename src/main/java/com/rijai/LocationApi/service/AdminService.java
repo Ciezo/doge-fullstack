@@ -32,6 +32,14 @@ public class AdminService implements IAdminService {
     @Override
     public Dog updateDog(Dog dog) {
         // The AdminService will update a Dog record
+        long id = dog.getId();
+        Dog dg = repository.findById(id).get();
+        dg.setName(dog.getName());
+        dg.setBreed(dog.getBreed());
+        dg.setAge(dog.getAge());
+        dg.setWeight(dog.getWeight());
+        dg.setHeight(dog.getHeight());
+        dg.setStatus(dog.getStatus());
         return repository.save(dog);
     }
 

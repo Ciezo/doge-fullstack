@@ -32,7 +32,7 @@ public class AdminController {
     }
 
     @RequestMapping(value = "/api/add-dog-with-admin", method = RequestMethod.POST)
-    public Dog addCountrySubmit(@RequestBody Dog dog) {
+    public Dog addDogSubmit(@RequestBody Dog dog) {
         return adminService.addDog(dog);
     }
 
