@@ -36,7 +36,7 @@ public class MyDriver {
 
         try {
             statement = connect.getConnection().createStatement();
-//            statement.executeUpdate(SQL);
+            statement.executeUpdate(SQL);
             statement.close();
         }
 

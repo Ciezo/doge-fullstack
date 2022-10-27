@@ -2,10 +2,18 @@ package com.rijai.LocationApi.model;
 
 import javax.persistence.*;
 import java.util.Objects;
+import lombok.Data;
+
 
 @Entity
+@Data
 @Table(name="admin")
 public class Admin {
+    /**
+     * This Model will only be the one to Authenticate.
+     * Since the Admin role is "heavy" in many responsibilities
+     * Particularly, CRUD operations for Dog records.
+     */
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
