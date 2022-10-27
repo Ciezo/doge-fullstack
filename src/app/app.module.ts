@@ -32,16 +32,13 @@ import { CreateDogComponent } from './create-dog/create-dog.component';
     LoginUserComponent,
     LoginAdminComponent,
     LandingPageComponent,
-    CreateDogComponent,
-    EditDogComponent,
+    CreateDogComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
